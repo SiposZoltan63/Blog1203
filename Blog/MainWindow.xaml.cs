@@ -23,6 +23,7 @@ namespace Blog
         public MainWindow()
         {
             InitializeComponent();
+            StartWindow.Navigate(new BloggerRegister());
         }
     }
 }
