@@ -11,7 +11,7 @@ namespace Blog.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySQL("server=localhost;database=blog;user=root;password=");
+            optionsBuilder.UseMySql("server=localhost;database=blog;user=root;password=");
         }
     }
 }

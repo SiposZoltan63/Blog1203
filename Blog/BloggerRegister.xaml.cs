@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Blog.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,35 +16,25 @@ using System.Windows.Shapes;
 
 namespace Blog
 {
-    /// <summary>
-    /// Interaction logic for BloggerRegister.xaml
-    /// </summary>
     public partial class BloggerRegister : Page
     {
-        private readonly DatabaseStatements _databaseStatements = new DatabaseStatements();
-        private readonly MainWindow _mainWindow;
         public BloggerRegister()
         {
             InitializeComponent();
-            _mainWindow = mainWindow;
         }
+
         private void regButton_Click(object sender, RoutedEventArgs e)
         {
-            if (userPasswordTextBox1.Password == userPasswordTextBox2.Password)
+            var blogger = new Blogger
             {
-                var user = new
-                {
-                    UserName = userNameTextBox.Text,
-                    UserPassword = userPasswordTextBox1.Password,
-                    Email = userEmailTextBox.Text,
-                };
-
-                MessageBox.Show(_databaseStatements.AddNewUser(user).ToString());
-                _mainWindow.StartWindow.Navigate(new LoginPage(_mainWindow));
-            }
-            else
+                Name = userNameText.Text,
+                Password = PasswordBox1.Password,
+                Email = emailTextBox.Text,
+            };
+            using (var context = new BlogDbContext())
             {
-                MessageBox.Show("Eltérő jelszavak");
+                context.bloggers.Add(blogger);
+                context.SaveChanges();
             }
         }
     }

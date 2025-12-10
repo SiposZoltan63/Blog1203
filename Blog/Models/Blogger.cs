@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Blog.Models
 {
-    internal class Blogger
+    public class Blogger
     {
         public int Id { get; set; }
         public string Name { get; set; }

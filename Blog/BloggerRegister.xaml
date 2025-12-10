@@ -29,10 +29,12 @@
         </Grid.ColumnDefinitions>
         <TextBlock Text="Felhasználónév" FontSize="15" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Padding="5" Background="White"/>
         <TextBlock Text="Jelszó" FontSize="15" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" Padding="5" Background="White"/>
+        <TextBlock Text="Jelszó újra" FontSize="15" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Padding="5" Background="White"/>
         <TextBlock Text="Email" FontSize="15" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0" Padding="5" Background="White"/>
-        <TextBox x:Name="userNameTextBox" FontSize="15" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="1" Padding="5"/>
-        <PasswordBox x:Name="userPasswordTextBox1" Grid.Row="1" Grid.Column="1"/>
-        <TextBox x:Name="userEmailTextBox" FontSize="15" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Grid.Row="4" Grid.Column="1" Padding="5"/>
+        <TextBox x:Name="userNameText" FontSize="15" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="1" Padding="5"/>
+        <PasswordBox x:Name="PasswordBox1" Grid.Row="1" Grid.Column="1"/>
+        <PasswordBox x:Name="userPasswordTextBox2" Grid.Row="2" Grid.Column="1"/>
+        <TextBox x:Name="emailTextBox" FontSize="15" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Grid.Row="4" Grid.Column="1" Padding="5"/>
         <StackPanel Grid.Row="5" Grid.Column="1" HorizontalAlignment="Right">
             <Button x:Name="regButton" Content="Regisztrálás" FontSize="20" Foreground="White" Background="Blue" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="regButton_Click"/>
         </StackPanel>
