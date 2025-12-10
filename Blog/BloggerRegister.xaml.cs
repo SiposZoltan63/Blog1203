@@ -35,6 +35,8 @@ namespace Blog
             {
                 context.bloggers.Add(blogger);
                 context.SaveChanges();
+                MessageBox.Show("Sikeres törlés");
+                BloggerDataGrid.ItemSource();
             }
         }
     }
