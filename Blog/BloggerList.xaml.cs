@@ -28,7 +28,7 @@ namespace Blog
         {
             using (var context = new BlogDbContext())
             {
-                return context.bloggers.ToList();
+                return context.blogger.ToList();
             }
         }
 
@@ -38,8 +38,14 @@ namespace Blog
             var blogger = item as Blogger;
             if (blogger != null)
             {
-                int id = blogger.Id;
-                MessageBox.Show(id.ToString());
+
+                using (var context = new BlogDbContext())
+                {
+                    context.blogger.Remove(blogger);
+                    context.SaveChanges();
+                    MessageBox.Show("Sikeres törlés.");
+                    BloggerDataGrid.ItemsSource = ListaBloggers();
+                }
             }
         }
     }

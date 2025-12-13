@@ -33,10 +33,8 @@ namespace Blog
             };
             using (var context = new BlogDbContext())
             {
-                context.bloggers.Add(blogger);
+                context.blogger.Add(blogger);
                 context.SaveChanges();
-                MessageBox.Show("Sikeres törlés");
-                BloggerDataGrid.ItemSource();
             }
         }
     }
