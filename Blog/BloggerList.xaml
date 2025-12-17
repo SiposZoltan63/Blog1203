@@ -10,6 +10,7 @@
 
     <Grid>
         <DataGrid x:Name="BloggerDataGrid" d:ItemsSource="{d:SampleData ItemCount=5}" MouseDoubleClick="DataGrid_MouseDoubleClick"/>
+        <Button x:Name="backregisterpage" Content="Regisztráció" HorizontalAlignment="Left" Margin="28,159,0,0" VerticalAlignment="Top" Height="45" Width="100" Click="backregisterpage_Click"/>
 
     </Grid>
 </Page>

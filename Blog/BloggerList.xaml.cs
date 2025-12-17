@@ -48,5 +48,11 @@ namespace Blog
                 }
             }
         }
+
+        private void backregisterpage_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow.StartWindow.Navigate(new BloggerRegister());
+        }
     }
 }
