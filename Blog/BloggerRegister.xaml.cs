@@ -37,5 +37,11 @@ namespace Blog
                 context.SaveChanges();
             }
         }
+
+        private void registracioslista_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainWindow.StartWindow.Navigate(new BloggerList());
+        }
     }
 }

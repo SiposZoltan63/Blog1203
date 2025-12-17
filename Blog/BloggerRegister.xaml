@@ -38,5 +38,6 @@
         <StackPanel Grid.Row="5" Grid.Column="1" HorizontalAlignment="Right">
             <Button x:Name="regButton" Content="Regisztrálás" FontSize="20" Foreground="White" Background="Blue" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="regButton_Click"/>
         </StackPanel>
+        <Button x:Name="registracioslista" FontSize="20" Grid.Column="1" Content="Regisztrációs lista" Foreground="White" Background="Blue" HorizontalAlignment="Left" Margin="216,0,0,0" Grid.Row="5" VerticalAlignment="Center" Height="50" Width="163" Click="registracioslista_Click"/>
     </Grid>
 </Page>
